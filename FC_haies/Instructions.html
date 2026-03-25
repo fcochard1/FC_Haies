@@ -46,8 +46,8 @@
         </p>
         <p class="mb-0">
             Un vendeur peut vendre plusieurs unités jusqu’à la capacité maximale de sa zone. Ainsi, selon
-            la décision de l’acheteur, un vendeur de la zone 1 peut être amené à produire 0, 1, 2 ou 3 unités
-            et un vendeur de la zone 2 peut être amené à produire 0, 1 ou 2 unités.
+            la décision de l’acheteur, un vendeur de la zone 1 peut être amené à produire et vendre 0, 1, 2 ou 3 unités
+            et un vendeur de la zone 2 peut être amené à produire et vendre 0, 1 ou 2 unités.
         </p>
     </div>
 </div>
@@ -61,7 +61,6 @@
         <p class="mb-3">
             Vous devez faire une <strong>offre de prix unitaire</strong> en fonction de votre coût unitaire de
             production.
-            Vous ne pouvez pas définir un prix pour un lot d’unités.
             C’est l’acheteur qui décide du nombre d’unités qu’il souhaite vous acheter.
         </p>
         <p class="mb-2">Remarques :</p>
@@ -81,10 +80,10 @@
             <li class="mb-1">
                 Si votre coût est trop élevé, compte-tenu de la contrainte de budget de l’acheteur (<strong
                     class="text-primary">200 €</strong>),
-                il vous sera impossible de vendre 3 unités dans la zone 1.
+                il vous sera impossible de vendre 3 unités dans la zone 1. Dans ce cas, un message « hors budget » s’affichera.
             </li>
             <li>Vous disposerez toujours des présentes instructions sur cet écran
-                en cliquant sur un bouton « Voir/masquer les instructions » (en dessous de « Valider »).
+                en cliquant sur un bouton « Instructions » (en haut à droite).
             </li>
         </ul>
         <p class="mb-3">
@@ -107,11 +106,10 @@
         {{ if is_comb }}
         <p class="mb-3">
             Vous devez faire des <strong>offres de prix unitaires</strong> en fonction de votre coût unitaire de
-            production et du nombre d’unités.
+            production et aussi du nombre d’unités.
         </p>
         <p class="mb-3">
-            Vous pouvez augmenter ou réduire le prix unitaire en fonction de la quantité,
-            ou garder le même prix unitaire. Vous êtes libre de fixer vos prix.
+            Vous pouvez proposer des prix unitaires identiques ou différents en fonction du nombre d’unités. 
             Toutefois, c’est l’acheteur qui décide du nombre d’unités qu’il souhaite vous acheter.
         </p>
         <p class="mb-2">Remarques :</p>
@@ -133,12 +131,12 @@
                 Si votre coût est trop élevé, compte-tenu de la contrainte de budget de l’acheteur (<strong
                     class="text-primary">200 €</strong>),
                 il vous sera impossible de vendre 3 unités dans la zone 1. Dans ce cas, un message
-                « hors budget » s’affichera, mais pour des raisons techniques, nous vous demandons
-                néanmoins de saisir un prix si la situation se présente.
+                « hors budget » s’affichera, mais pour des raisons techniques, nous vous demandons de saisir 
+                également un prix pour 3 unités.
             </li>
             <li>Vous disposerez toujours des présentes instructions sur cet écran
                 en
-                cliquant sur un bouton « Voir/masquer les instructions » (en dessous de « Valider »).
+                cliquant sur un bouton « Instructions » (en haut à droite).
             </li>
         </ul>
         <p class="mb-3">
@@ -170,7 +168,7 @@
         <p class="mb-3">
             L’acheteur retire une certaine valeur des unités achetées aux vendeurs.
             Il préfère acheter plusieurs unités dans une même zone,
-            car la valeur qu'il en retire augmente avec le nombre d’unités achetées dans cette zone :
+            car la valeur qu'il en retire augmente plus que proportionnellement avec le nombre d’unités achetées dans cette zone :
         </p>
         <ul class="mb-4">
             <li class="mb-2">1 unité (isolée) achetée dans une zone crée pour l'acheteur
@@ -182,7 +180,7 @@
             <li>3 unités achetées dans une même zone créent une valeur de <strong>375 (3 x 100 + 75)</strong>.</li>
         </ul>
         <p class="mb-3">
-            L’acheteur cherche à maximiser la valeur qu’il tire de ses achats par euro dépensé.
+            Compte tenu de son budget de 200 euros, l’acheteur cherche à maximiser la valeur qu’il tire de ses achats par euro dépensé.
             Autrement dit, il cherche à maximiser l’indicateur <strong>W</strong> calculé ainsi :
         </p>
         <div class="alert alert-secondary text-center fw-bold fs-5 mb-0">
@@ -202,7 +200,7 @@
             avec la contrainte budgétaire de <strong class="text-primary">200 €</strong>, et retient celle qui maximise
             <strong>W</strong>.
             Il peut acheter une ou plusieurs unités à un même vendeur ou répartir ses achats
-            entre plusieurs vendeurs.
+            entre plusieurs vendeurs, sur une seule zone ou sur les deux zones.
         </p>
         <p class="mb-0">
             En cas d’exæquo, c’est-à-dire d’égalité de <strong>W</strong> pour différentes combinaisons
@@ -234,7 +232,7 @@
             <em>Dans ce jeu, votre gain dépend de votre décision, mais aussi de celles des autres vendeurs de votre
                 groupe.
                 En effet, l’acheteur compare toutes les offres de tous les vendeurs pour sélectionner
-                celle qui maximise la valeur créée par euro dépensé.
+                celle qui maximise sa valeur créée par euro dépensé.
                 En conséquence, proposer un prix plus élevé augmentera votre gain si votre offre est sélectionnée
                 mais réduit en même temps vos chances d’être sélectionné.</em>
         </p>
@@ -273,8 +271,8 @@
                 </ul>
             </li>
             <p class="mb-3">
-                Voici un exemple d'écran de résultat d'une période (nous avons volontairement noirci certains
-                montants dans ces instructions pour ne pas influencer vos choix) :
+                Voici un exemple d'écran de résultat d'une période (nous avons volontairement laissé
+                certaines rubriques vides dans ces instructions pour ne pas influencer vos choix) :
             </p>
 
             <figure class="text-center mb-0">
@@ -297,8 +295,8 @@
                 </ul>
             </li>
             <p class="mb-3">
-                Voici un exemple d'écran de résultat d'une période (nous avons volontairement noirci
-                certains montants dans ces instructions pour ne pas influencer vos choix) :
+                Voici un exemple d'écran de résultat d'une période (nous avons volontairement laissé
+                certaines rubriques vides dans ces instructions pour ne pas influencer vos choix) :
             </p>
 
             <figure class="text-center mb-0">
